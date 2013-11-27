@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0" />
+
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="js/storage/memory-store.js"></script>
+<script src="js/main.js"></script>
+
+<style>
+
+ body {margin:0!important; padding:0!important;}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { #wrapper {
+    
+    width:768px; height:1024px; background-image:url(img/portrait-bg.jpg); margin:0 auto; padding:0!important; position:relative; overflow:hidden;}
+	
+	.landscape {display:none;}
+    
+  }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { #wrapper {
+    
+    width:1024px; height:768px; background-image:url(img/landscape-bg.jpg); margin:0 auto; padding:0!important; position:relative;
+    overflow:hidden;
+    }
+	
+	.portrait {display:none;}
+	
+	}
+  
+ 
+  
+  
+    
+    
+    ul {position:absolute;}
+	ul li {list-style-type:none; float:left; display:inline-block; position:relative;}
+	
+	ul.landscape {bottom:10px;}
+	
+	ul.landscape li {padding:0 25px;}
+	
+	ul.portrait { bottom:10px; margin-left:-20px!important; width:768px;}
+	
+	ul.portrait li { padding:0 10px;}
+    
+  
+</style>
+
+</head>
+<body>
+
+<div id="wrapper" >
+
+
+
+
+  
+  <video class="portrait" width="568"  controls="">
+	<source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
+	
+</video>
+
+
+  
+  <video class="landscape" width="824" controls="">
+	<source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
+	
+</video>
+
+
+  
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+  

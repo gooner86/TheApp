@@ -15,7 +15,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) { #wrapper {
     
-    width:768px; height:1024px; background-color:#0ff; margin:0 auto; padding:0!important;}
+    width:768px; height:1024px; background-image:url(img/portrait-bg.jpg); margin:0 auto; padding:0!important; position:relative; overflow:hidden;}
 	
 	.landscape {display:none;}
     
@@ -26,8 +26,8 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : landscape) { #wrapper {
     
-    width:1024px; height:768px; background-color:#a2d6ff; margin:0 auto; padding:0!important;
-    
+    width:1024px; height:768px; background-image:url(img/landscape-bg.jpg); margin:0 auto; padding:0!important; position:relative;
+    overflow:hidden;
     }
 	
 	.portrait {display:none;}
@@ -38,8 +38,17 @@ and (orientation : landscape) { #wrapper {
   
   
     
-    video {padding:30px; float:left;}
-    ul {float:left;}
+    
+    ul {position:absolute;}
+	ul li {list-style-type:none; float:left; display:inline-block; position:relative;}
+	
+	ul.landscape {bottom:10px;}
+	
+	ul.landscape li {padding:0 25px;}
+	
+	ul.portrait { bottom:10px; margin-left:-20px!important; width:768px;}
+	
+	ul.portrait li { padding:0 10px;}
     
   
 </style>
@@ -49,13 +58,30 @@ and (orientation : landscape) { #wrapper {
 
 <div id="wrapper" >
 
-<h1 class="landscape">Landscape orietation</h1>
-<h1 class="portrait">Portrait orietation</h1>
 
-<ul>
-	<li><a href="#" onclick="window.open('1.pdf', '_blank', 'location=no');">PDF Example</a></li>
-	<li><a href="Videopage.html">Video Example</a></li>
-	
+
+<ul class="portrait">
+
+	<li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/1.png" /></a></li>
+    <li><a href="videopage1.html"><img src="img/2.png" /></a></li>
+    <li><a href="videopage2.html"><img src="img/3.png" /></a></li>
+    <li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/4.png" /></a></li>
+    <li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/5.png" /></a></li>
+    <li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/6.png" /></a></li>
+    <li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/7.png" /></a></li>
+
+</ul>
+
+<ul class="landscape">
+
+	<li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/1.png" /></a></li>
+    <li><a href="videopage1.html"><img src="img/2.png" /></a></li>
+    <li><a href="videopage2.html"><img src="img/3.png" /></a></li>
+    <li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/4.png" /></a></li>
+    <li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/5.png" /></a></li>
+    <li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/6.png" /></a></li>
+    <li><a href="#" onClick="window.open('1.pdf', '_blank', 'location=no');"><img src="img/7.png" /></a></li>
+
 </ul>
   
   
