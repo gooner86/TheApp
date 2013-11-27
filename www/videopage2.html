@@ -8,14 +8,25 @@
 
 <style>
 
- body {margin:0!important; padding:0!important;}
+ body {margin:0!important; padding:0!important; font-family:Verdana, Geneva, sans-serif;}
+ 
+ a {color:#fff; text-decoration:none; display:block;}
+  a:visited {color:#fff;text-decoration:none; display:block;}
+   a:active {color:#fff;text-decoration:none; display:block;}
+    a:hover {color:#fff;text-decoration:none; display:block;}
+	 a:link {color:#fff;text-decoration:none; display:block;}
+	
+.landscape a.back {height:40px; width:100%; text-align:center;font-size:16px; position:absolute; bottom:40px;font-weight:bold;}
+
+.portrait a.back {height:40px;font-size:16px; position:absolute; bottom:40px; width:100%; text-align:center; font-weight:bold;}
+ 
 
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) { #wrapper {
     
-    width:768px; height:1024px; background-image:url(img/portrait-bg.jpg); margin:0 auto; padding:0!important; position:relative; overflow:hidden;}
+    width:768px; height:1024px; background-image:url(img/portrait-blank.jpg); margin:0 auto; padding:0!important; position:relative; overflow:hidden;}
 	
 	.landscape {display:none;}
     
@@ -26,7 +37,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : landscape) { #wrapper {
     
-    width:1024px; height:768px; background-image:url(img/landscape-bg.jpg); margin:0 auto; padding:0!important; position:relative;
+    width:1024px; height:768px; background-image:url(img/landscape-blank.jpg); margin:0 auto; padding:0!important; position:relative;
     overflow:hidden;
     }
 	
@@ -36,7 +47,7 @@ and (orientation : landscape) { #wrapper {
   
  
   
-  
+  h1 {color:#fff; width:100%; text-align:center;}
     
     
     ul {position:absolute;}
@@ -49,6 +60,12 @@ and (orientation : landscape) { #wrapper {
 	ul.portrait { bottom:10px; margin-left:-20px!important; width:768px;}
 	
 	ul.portrait li { padding:0 10px;}
+	
+	video.landscape {margin:0 100px; float:left;}
+	
+	video.portrait {margin-top:100px; float:left;}
+	
+
     
   
 </style>
@@ -58,23 +75,24 @@ and (orientation : landscape) { #wrapper {
 
 <div id="wrapper" >
 
-
+<h1 class="landscape">Apartment builder application</h1>
+<h1 class="portrait">Apartment builder application</h1>
 
 
   
-  <video class="portrait" width="568"  controls="">
+  <video class="portrait" width="768" height="575" controls="">
 	<source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
 	
 </video>
 
-
+<div class="landscape"><a class="back" href="index.html"><< Return to main menu </a></div>
   
-  <video class="landscape" width="824" controls="">
+  <video class="landscape" width="824" height="500" controls="">
 	<source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
 	
 </video>
 
-
+<div class="portrait"><a class="back" href="index.html"><<  Return to main menu</a></div>
   
 </div>
 
