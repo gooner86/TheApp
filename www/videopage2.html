@@ -5,7 +5,9 @@
 <script src="lib/jquery-1.8.2.min.js"></script>
 <script src="js/storage/memory-store.js"></script>
 <script src="js/main.js"></script>
-
+<script type="text/javascript">
+       $("#video1").webkitEnterFullScreen();
+ </script>
 <style>
 
  body {margin:0!important; padding:0!important; font-family:Verdana, Geneva, sans-serif;}
@@ -29,7 +31,7 @@ and (orientation : portrait) { #wrapper {
     width:768px; height:1024px; background-image:url(img/portrait-blank.jpg); margin:0 auto; padding:0!important; position:relative; overflow:hidden;}
 	
 	.landscape {display:none;}
-    
+    video {margin:100px 0 0 0 ; float:left; width:768px;}
   }
 
 @media only screen 
@@ -42,6 +44,7 @@ and (orientation : landscape) { #wrapper {
     }
 	
 	.portrait {display:none;}
+	video { float:left; width:824px; height:500px; margin:0 100px;}
 	
 	}
   
@@ -61,9 +64,9 @@ and (orientation : landscape) { #wrapper {
 	
 	ul.portrait li { padding:0 10px;}
 	
-	video.landscape {margin:0 100px; float:left;}
 	
-	video.portrait {margin-top:100px; float:left;}
+	
+	
 	
 
     
@@ -80,15 +83,12 @@ and (orientation : landscape) { #wrapper {
 
 
   
-  <video class="portrait" width="768" height="575" controls="">
-	<source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
-	
-</video>
+
 
 <div class="landscape"><a class="back" href="index.html"><< Return to main menu </a></div>
   
-  <video class="landscape" width="824" height="500" controls="">
-	<source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
+  <video id="video1" controls autoplay>
+	<source src="video/final.mp4" type="video/mp4">
 	
 </video>
 
